@@ -1,12 +1,12 @@
 import React from 'react'
-import { Container } from './style'
+import { Container, Title } from './style'
 import { Text } from 'react-native'
 import { IPageProps } from './types'
 
 function HomeView({ HomeTitle }: IPageProps) {
 	return (
 		<Container>
-			<Text>{HomeTitle}</Text>
+			<Title>{HomeTitle}</Title>
 		</Container>
 	)
 }
