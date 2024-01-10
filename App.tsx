@@ -1,28 +1,16 @@
 import React from 'react'
-import {
-	SafeAreaView,
-	ScrollView,
-	StatusBar,
-	StyleSheet,
-	Text,
-	useColorScheme,
-	View,
-} from 'react-native'
-import { SafeArea } from './src/styles/SafeArea'
+import { NavigationContainer } from '@react-navigation/native'
+import { Routes } from './src/routes'
+import { ThemeProvider } from 'styled-components/native'
+import { theme } from './src/styles/theme'
 
 function App(): React.JSX.Element {
 	return (
-		<SafeArea>
-			<ScrollView contentInsetAdjustmentBehavior='automatic'>
-				<View
-					style={{
-						backgroundColor: 'white',
-					}}
-				>
-					<Text>CAMPINHO APP</Text>
-				</View>
-			</ScrollView>
-		</SafeArea>
+		<ThemeProvider theme={theme}>
+			<NavigationContainer>
+				<Routes />
+			</NavigationContainer>
+		</ThemeProvider>
 	)
 }
 
