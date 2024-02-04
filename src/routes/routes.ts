@@ -6,7 +6,7 @@ import { FriendsScreen } from '../screens/Friends'
 import { EventsScreen } from '../screens/Events'
 import BottomBar from './BottomBar'
 import { LoginScreen } from '../screens/Login'
-import { useStore } from '../store/store'
+import { useStore } from '../store/useLogin'
 
 interface IRoutes {
 	name: ERoutes

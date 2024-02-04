@@ -1,16 +1,25 @@
-import React, { useCallback, useRef, useState } from 'react'
-import { Container, Content, Input, InputContainer, InputLabel } from './style'
+import React, { useState } from 'react'
+import {
+	Container,
+	Content,
+	EnterLogin,
+	EnterLoginLabel,
+	ForgotLabel,
+	GoRegister,
+	RegisterLabel,
+	SubTitle,
+	Title,
+} from './style'
 import { IPageProps } from './types'
 import { AppWrapper } from '../../components/AppWrapper'
 import Logo from '../../../assets/icons/Logo.svg'
-import { useTheme } from 'styled-components'
-import { Button, Text, TextInput, Touchable } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import { InputText } from '../../components/InputText'
+import EmailIcon from '../../../assets/icons/EmailIcon.svg'
+import PassIcon from '../../../assets/icons/PassIcon.svg'
 
-function LoginView({ navigation }: IPageProps) {
-	const theme = useTheme()
-	const inputRef = useRef<TextInput>(null)
+function LoginView({ navigation, setIsLogin }: IPageProps) {
 	const [textInput, setTextInput] = useState('')
+	const [passInput, setPassInput] = useState('')
 
 	return (
 		<AppWrapper navigation={navigation}>
@@ -18,17 +27,33 @@ function LoginView({ navigation }: IPageProps) {
 				<Logo />
 
 				<Content>
-					<InputContainer>
-						<InputLabel>Nome</InputLabel>
-						<Input
-							ref={inputRef}
-							placeholder='Digite seu nome'
-							placeholderTextColor={theme.colors.lightGray}
-							onChangeText={(text) => setTextInput(text.toLocaleLowerCase())}
-							value={textInput}
-						/>
-					</InputContainer>
+					<Title>Bem-vindo(a)</Title>
+					<SubTitle>de volta!</SubTitle>
+					<InputText
+						label='Email'
+						placeholderLabel='Digite seu email...'
+						text={textInput}
+						setText={setTextInput}
+						Icon={() => <EmailIcon />}
+					/>
+
+					<InputText
+						label='Senha'
+						placeholderLabel='Digite sua senha...'
+						text={passInput}
+						setText={setPassInput}
+						Icon={() => <PassIcon />}
+					/>
+					<EnterLogin onPress={() => setIsLogin(true)}>
+						<EnterLoginLabel>Entrar</EnterLoginLabel>
+					</EnterLogin>
+
+					<ForgotLabel>Esqueci minha senha</ForgotLabel>
 				</Content>
+
+				<RegisterLabel>
+					Ainda não possui uma conta? <GoRegister>Registre-se</GoRegister>
+				</RegisterLabel>
 			</Container>
 		</AppWrapper>
 	)

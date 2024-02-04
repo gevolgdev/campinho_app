@@ -3,4 +3,5 @@ import { ERoutes } from '../../routes/enum'
 
 export interface IPageProps {
 	navigation: NavigationProp<ERoutes>
+	setIsLogin: (State: boolean) => void
 }
