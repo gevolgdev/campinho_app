@@ -2,10 +2,7 @@ import React from 'react'
 
 import type { NavigationProp } from '@react-navigation/native'
 import { ERoutes } from '../enum'
-import {
-	BottomTabNavigationOptions,
-	createBottomTabNavigator,
-} from '@react-navigation/bottom-tabs'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { HomeScreen } from '../../screens/Home'
 import { FriendsScreen } from '../../screens/Friends'
 import { EventsScreen } from '../../screens/Events'
@@ -13,7 +10,7 @@ import { IBottomBarRoutes } from './types'
 import { BottomBarView } from './view'
 import { ProfileScreen } from '../../screens/Profile'
 import { FeedScreen } from '../../screens/Feed'
-
+import { useStore } from '../../store/useLogin'
 interface IPageProps {
 	navigation: NavigationProp<ERoutes>
 }
