@@ -5,6 +5,7 @@ enum ERoutes {
 	BOTTOM_BAR = 'BOTTOM_BAR',
 	FEED = 'FEED',
 	PROFILE = 'PROFILE',
+	LOGIN = 'LOGIN',
 }
 
 export { ERoutes }
