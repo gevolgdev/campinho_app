@@ -1,10 +1,11 @@
 import { createElement } from 'react'
 import { HomeView } from './view'
+import { useTheme } from 'styled-components'
 
-function HomeScreen() {
-	const HomeTitle = '🏠 Home'
+function HomeScreen({ navigation }: any) {
+	const theme = useTheme()
 
-	const props = { HomeTitle }
+	const props = { theme, navigation }
 
 	return createElement(HomeView, props)
 }

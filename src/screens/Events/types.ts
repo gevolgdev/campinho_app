@@ -1,3 +1,3 @@
 export interface IPageProps {
-	SchedulesTitle: string
+	navigation: any
 }

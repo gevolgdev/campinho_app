@@ -4,14 +4,14 @@ import { IPageProps } from './types'
 import { AppWrapper } from '../../components/AppWrapper'
 import { Header } from '../../components/Header'
 
-function FriendsView({ navigation }: IPageProps) {
+function EventsView({ navigation }: IPageProps) {
 	return (
 		<AppWrapper navigation={navigation}>
 			<Container>
-				<Header navigation={navigation} />
+				<Header />
 			</Container>
 		</AppWrapper>
 	)
 }
 
-export { FriendsView }
+export { EventsView }

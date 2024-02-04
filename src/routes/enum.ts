@@ -1,7 +1,10 @@
 enum ERoutes {
 	HOME = 'HOME',
 	FRIENDS = 'FRIENDS',
-	SCHEDULES = 'SCHEDULES',
+	EVENTS = 'EVENTS',
+	BOTTOM_BAR = 'BOTTOM_BAR',
+	FEED = 'FEED',
+	PROFILE = 'PROFILE',
 }
 
 export { ERoutes }
