@@ -1,6 +1,12 @@
 const theme = {
-	color: {
-		black: '#0C0C0C',
+	colors: {
+		white: '#FFFFFF',
+		pink: '#E22D5A',
+		background: '#0E1013',
+		gray: '#22252C',
+		graySecondary: '#22252C',
+		lightGray: '#D9D9D9',
+		green: '#0FF040',
 	},
 	fonts: {
 		black: 'InterTight-Black',
@@ -15,7 +21,7 @@ const theme = {
 	},
 }
 
-type ColorType = keyof typeof theme.color
+type ColorType = keyof typeof theme.colors
 type FontType = keyof typeof theme.fonts
 
 export type { ColorType, FontType }

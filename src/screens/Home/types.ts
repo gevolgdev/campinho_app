@@ -1,3 +1,6 @@
+import type { NavigationProp } from '@react-navigation/native'
+import { ERoutes } from '../../routes/enum'
+
 export interface IPageProps {
-	HomeTitle: string
+	navigation: NavigationProp<ERoutes>
 }
