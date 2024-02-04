@@ -1,10 +1,10 @@
 import { createElement } from 'react'
 import { FriendsView } from './view'
 
-function FriendsScreen() {
+function FriendsScreen({ navigation }: { navigation: any }) {
 	const FriendsTitle = '👥 Friends'
 
-	const props = { FriendsTitle }
+	const props = { FriendsTitle, navigation }
 
 	return createElement(FriendsView, props)
 }

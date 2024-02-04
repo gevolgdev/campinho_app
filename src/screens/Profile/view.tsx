@@ -3,15 +3,16 @@ import { Container } from './style'
 import { IPageProps } from './types'
 import { AppWrapper } from '../../components/AppWrapper'
 import { Header } from '../../components/Header'
+import { Text } from 'react-native'
 
-function FriendsView({ navigation }: IPageProps) {
+function ProfileView({ navigation }: IPageProps) {
 	return (
 		<AppWrapper navigation={navigation}>
 			<Container>
-				<Header navigation={navigation} />
+				<Text style={{ color: 'white' }}>Perfil</Text>
 			</Container>
 		</AppWrapper>
 	)
 }
 
-export { FriendsView }
+export { ProfileView }
