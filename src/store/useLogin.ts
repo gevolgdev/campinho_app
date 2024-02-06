@@ -9,7 +9,7 @@ type Action = {
 }
 
 export const useLogin = create<State & Action>((set) => ({
-	isLogin: false,
+	isLogin: true,
 	setIsLogin: (state) =>
 		set(() => ({
 			isLogin: state,

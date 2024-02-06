@@ -10,6 +10,7 @@ export const Container = styled.View`
 
 	flex-direction: row;
 	justify-content: space-between;
+	z-index: 0;
 `
 
 export const Button = styled.TouchableOpacity`
